@@ -19,8 +19,7 @@ describe Account do
   describe "#withdraw" do
     it "user can withdraw money from account" do
       account.deposit(200)
-      account.withdraw(50)
-      expect(account.balance).to be 150
+      expect { account.withdraw(50) }.to change { account.balance }.from(200).to(150)
     end
   end
 end
