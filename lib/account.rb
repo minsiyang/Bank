@@ -14,4 +14,7 @@ class Account
     @balance -= amount
   end
 
+#   def print_statement
+#   end
+
 end
