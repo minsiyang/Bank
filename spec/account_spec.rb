@@ -4,7 +4,7 @@ describe Account do
   subject(:account) { Account.new }
 
   it "has a default balance of 0 when initialize" do
-    expect(account.balance).to be 0
+    expect(account.balance).to be Account::DEFAULT_BALANCE
   end
 
   it "has a empty transaction history when initialize" do
