@@ -1,27 +1,3 @@
-Skip to content
-minsiyang
-/
-bank_tech_test
-0
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-More
-bank_tech_test/.rubocop.yml
-@minsiyang
-minsiyang Rubocop checkup, all fixed
-Latest commit 97f0bea yesterday
- History
- 1 contributor
-487 lines (482 sloc)  11.4 KB
-  
 #    _____               ____ ____        __     _         __
 #   / ___/ _____ ____ _ / __// __/____   / /    (_)____   / /_
 #   \__ \ / ___// __ `// /_ / /_ / __ \ / /    / // __ \ / __/
@@ -509,15 +485,3 @@ Style/WordArray:
   Enabled: false
 Style/ZeroLengthPredicate:
   Enabled: false
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
