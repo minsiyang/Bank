@@ -1,7 +1,9 @@
 require "account"
 
 describe Account do
-  subject(:account) { Account.new }
+  subject(:account) { Account.new(transaction)}
+
+  let(:transaction) { instance_double("transaction") }
 
   it "has a default balance of 0 when initialize" do
     expect(account.balance).to be Account::DEFAULT_BALANCE
