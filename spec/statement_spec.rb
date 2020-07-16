@@ -7,13 +7,13 @@ describe Statement do
 
   describe "#header" do
     it "output the header" do
-      expect { statement.header }.to output(" Date    || Credit || Debit || Balance \n").to_stdout
+      expect { statement.header }.to output("Date    || Credit || Debit || Balance \n").to_stdout
     end
   end
 
   describe "#print" do
     it "can print the transaction history" do
-      expect { statement.print(transaction_history) }.to output(" Date    || Credit || Debit || Balance \n"\
+      expect { statement.print(transaction_history) }.to output("Date    || Credit || Debit || Balance \n"\
       "16/07/2020 || 100 ||  || 100\n"
       ).to_stdout
     end

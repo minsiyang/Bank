@@ -6,7 +6,7 @@ class Account
   DEFAULT_BALANCE = 0
   attr_reader :balance, :transaction_history
   
-  def initialize(transaction = Transaction, statement=Statement.new)
+  def initialize(transaction = Transaction, statement = Statement.new)
     @balance = DEFAULT_BALANCE
     @transaction_history = []
     @transaction = transaction

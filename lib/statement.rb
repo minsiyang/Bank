@@ -1,6 +1,6 @@
 class Statement
   def header
-    puts " Date    || Credit || Debit || Balance "
+    puts "Date    || Credit || Debit || Balance "
   end
 
   def print(transaction_history)

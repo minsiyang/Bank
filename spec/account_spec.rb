@@ -16,7 +16,7 @@ describe Account do
 
   describe "#deposit" do
     it "user can deposit money into account" do
-      expect(transaction).to receive(:new).with(credit: 100, balance: 100) 
+      expect(transaction).to receive(:new).with(credit: 100.00, balance: 100.00) 
       account.deposit(100)
       expect(account.balance).to eq 100
       expect(account.transaction_history.length).to eq 1
