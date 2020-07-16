@@ -18,6 +18,7 @@ describe Account do
       expect(transaction).to receive(:new).with(credit: 100, balance: 100) 
       account.deposit(100)
       expect(account.balance).to eq 100
+      expect(account.transaction_history.length).to eq 1
     end
   end
 
@@ -27,6 +28,7 @@ describe Account do
       account.deposit(200)
       expect(transaction).to receive(:new).with(debit: 50, balance: 150)
       expect { account.withdraw(50) }.to change { account.balance }.from(200).to(150)
+      expect(account.transaction_history.length).to eq 2
     end
   end
 
