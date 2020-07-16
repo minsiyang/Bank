@@ -35,3 +35,36 @@ As a customer
 so I can keep track on my account
 I would like to print out my account statement
 ```
+### Domain Model Planning
+<img src="image/account.png" width="300">
+<img src="image/Sclass.png" width="300">
+<img src="image/Tclass.png" width="300">
+
+### Quick Start
+Clone this repo.
+
+1 Install gems with:
+```
+bundle
+```
+2 Run test suites with:
+```
+rspec && rubocop
+```
+3 Launch IRB:
+```
+irb
+```
+4 Once in IRB:
+```
+require './lib/account.rb'
+account = Account.new
+```
+Use your account with the following methods:
+
+- **account.deposit(amount)**
+![deposit](image/deposit.png)
+- **account.withdraw(amount)**
+![withdraw](image/withdraw.png)
+- **account.print_statement**
+![statement](image/statement.png)
