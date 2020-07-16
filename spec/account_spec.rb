@@ -1,9 +1,10 @@
 require "account"
 
 describe Account do
-  subject(:account) { Account.new(transaction) }
+  subject(:account) { Account.new(transaction, statement) }
 
   let(:transaction) { instance_double("transaction") }
+  let(:statement) { instance_double("statement") }
 
   it "has a default balance of 0 when initialize" do
     expect(account.balance).to be Account::DEFAULT_BALANCE
@@ -30,6 +31,13 @@ describe Account do
       expect(transaction).to receive(:new).with(debit: 50, balance: 150)
       expect { account.withdraw(50) }.to change { account.balance }.from(200).to(150)
       expect(account.transaction_history.length).to eq 2
+    end
+  end
+
+  describe "#print_statement" do
+    it "calls for #print from the statement class" do
+      allow(statement).to receive(:print)
+      account.print_statement
     end
   end
 
