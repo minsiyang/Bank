@@ -9,7 +9,7 @@ describe Transaction do
   describe "it initialize with a deposit transaction" do
     
     it "should have a date when initialize" do
-        expect(deposit_transaction.date).to eq time
+      expect(deposit_transaction.date).to eq time
     end
 
     it "should have a credit when initialize" do
@@ -28,7 +28,7 @@ describe Transaction do
   describe "it initialize with a withdraw transaction" do
     
     it "should have a date when initialize" do
-        expect(withdraw_transaction.date).to eq time
+      expect(withdraw_transaction.date).to eq time
     end
 
     it "should have a credit when initialize" do

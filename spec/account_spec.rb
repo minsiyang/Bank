@@ -1,7 +1,7 @@
 require "account"
 
 describe Account do
-  subject(:account) { Account.new(transaction)}
+  subject(:account) { Account.new(transaction) }
 
   let(:transaction) { instance_double("transaction") }
 
