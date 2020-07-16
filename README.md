@@ -1,4 +1,5 @@
 # Bank Tech Test
+<img src="image/money.jpg" width=900 height=400 >
 
 ## Specification
 ### Requirements
