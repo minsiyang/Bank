@@ -4,8 +4,9 @@ class Statement
   end
 
   def print(transaction_history)
-    transaction_history.reverse_each do |transaction|
-      print transaction
+    header
+    transaction_history.reverse.each do |transaction|
+      puts "#{transaction.date} || #{transaction.credit} || #{transaction.debit} || #{transaction.balance}"
     end
   end
 end

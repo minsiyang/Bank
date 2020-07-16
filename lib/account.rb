@@ -1,5 +1,5 @@
 require_relative "transaction"
-require_relative "statement"
+# require_relative "statement"
 
 class Account
   
@@ -10,7 +10,6 @@ class Account
     @balance = DEFAULT_BALANCE
     @transaction_history = []
     @transaction = transaction
-    @statement = statement
   end
 
   def deposit(amount)
@@ -23,8 +22,5 @@ class Account
     @transaction_history.push(@transaction.new(debit: amount, balance: @balance))
   end
 
-  def print_statement
-    @statement.print(@transaction_history)
-  end
 
 end

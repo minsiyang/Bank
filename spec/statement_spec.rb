@@ -2,10 +2,9 @@ require "statement"
 
 describe Statement do
   subject(:statement) { Statement.new }
-  
-#   let(:transaction_history) {
-#     [{ }]
-#   }
+  let(:transaction) { double(date: '16/07/2020', credit: 100, debit: nil, balance: 100) }
+  let(:transaction_history) { [transaction] }
+
 
   describe "#header" do
     it "output the header" do
@@ -13,15 +12,11 @@ describe Statement do
     end
   end
 
-#   describe "#print" do
-#     let(:statement) do
-#         " Date    || Credit || Debit || Balance\n" \
-#         " 14/07/20 || 50.00 || ----- || 50.00 \n" \
-#         " 14/07/20 || ----- || 20.00 || 30.00 \n"
-#     end
-
-#     it "can print the transaction history" do
-#       expect { statement.print(transaction_history) }.to output(statement).to_stdout
-#     end
-#   end
+  describe "#print" do
+    it "can print the transaction history" do
+      expect { statement.print(transaction_history) }.to output( " Date    || Credit || Debit || Balance \n"\
+      "16/07/2020 || 100 ||  || 100\n"
+      ).to_stdout
+    end
+  end
 end

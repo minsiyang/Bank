@@ -33,9 +33,5 @@ describe Account do
     end
   end
 
-#   describe "#print_statement" do
-#     it "call the statement class" do
-      
-#     end
-#   end
+
 end
