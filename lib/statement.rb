@@ -18,6 +18,6 @@ class Statement
   end
 
   def pence(amount)
-    "%.2f" % amount unless amount == nil
+    "%.2f" % amount unless amount.nil?
   end
 end
