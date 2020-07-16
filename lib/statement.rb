@@ -12,8 +12,12 @@ class Statement
 
   def prepare_statement(transaction_history)
     transaction_history.reverse.each do |transaction|
-      puts "#{transaction.date} || #{transaction.credit} ||"\
-        " #{transaction.debit} || #{transaction.balance}"
+      puts "#{transaction.date} || #{pence(transaction.credit)} ||"\
+        " #{pence(transaction.debit)} || #{pence(transaction.balance)}"
     end
+  end
+
+  def pence(amount)
+    "%.2f" % amount unless amount == nil
   end
 end
