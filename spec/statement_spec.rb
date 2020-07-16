@@ -7,7 +7,7 @@ describe Statement do
 
   describe "#print" do
     it "can print the transaction history" do
-      expect { statement.print(transaction_history) }.to output("Date    || Credit || Debit || Balance \n"\
+      expect { statement.print(transaction_history) }.to output("date    || credit || debit || balance \n"\
       "16/07/2020 || 100.00 ||  || 100.00\n"
       ).to_stdout
     end

@@ -8,7 +8,7 @@ class Statement
   private
 
   def header
-    puts "Date    || Credit || Debit || Balance "
+    puts "date    || credit || debit || balance "
   end
 
   def prepare_statement(transaction_history)
