@@ -26,6 +26,7 @@ describe Account do
     it "user can withdraw money from account" do
       expect(transaction).to receive(:new).with(credit: 200, balance: 200)
       account.deposit(200)
+
       expect(transaction).to receive(:new).with(debit: 50, balance: 150)
       expect { account.withdraw(50) }.to change { account.balance }.from(200).to(150)
       expect(account.transaction_history.length).to eq 2
@@ -33,8 +34,8 @@ describe Account do
   end
 
 #   describe "#print_statement" do
-#     it "print out the header and transaction history" do
-        
+#     it "call the statement class" do
+      
 #     end
 #   end
 end
