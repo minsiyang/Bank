@@ -13,10 +13,12 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    @transaction_history.push(@transaction.new(credit: amount, balance: @balance))
   end
 
   def withdraw(amount)
     @balance -= amount
+    @transaction_history.push(@transaction.new(debit: amount, balance: @balance))
   end
 
 #   def print_statement

@@ -15,14 +15,17 @@ describe Account do
 
   describe "#deposit" do
     it "user can deposit money into account" do
+      expect(transaction).to receive(:new).with(credit: 100, balance: 100) 
       account.deposit(100)
-      expect(account.balance).to be 100
+      expect(account.balance).to eq 100
     end
   end
 
   describe "#withdraw" do
     it "user can withdraw money from account" do
+      expect(transaction).to receive(:new).with(credit: 200, balance: 200)
       account.deposit(200)
+      expect(transaction).to receive(:new).with(debit: 50, balance: 150)
       expect { account.withdraw(50) }.to change { account.balance }.from(200).to(150)
     end
   end
