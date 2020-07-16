@@ -22,5 +22,4 @@ class Account
     @transaction_history.push(@transaction.new(debit: amount, balance: @balance))
   end
 
-
 end
