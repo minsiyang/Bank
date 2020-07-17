@@ -6,14 +6,6 @@ describe Account do
   let(:transaction) { instance_double("transaction") }
   let(:statement) { instance_double("statement") }
 
-  it "has a default balance of 0 when initialize" do
-    expect(account.balance).to be Account::DEFAULT_BALANCE
-  end
-
-  it "has a empty transaction history when initialize" do
-    expect(account.transaction_history).to eq []
-  end
-
   describe "#deposit" do
     it "user can deposit money into account" do
       expect(transaction).to receive(:new).with(credit: 100.00, balance: 100.00) 
